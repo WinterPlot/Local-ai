@@ -1,0 +1,1 @@
+-keep class app.localai.engine.NativeBridge { *; }

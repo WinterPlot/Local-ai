@@ -1,0 +1,2 @@
+# Models
+Import any `.gguf`; the header is validated first (magic, version, metadata) and the file is streamed into app-private storage (never fully held in RAM). Your original is never modified. Whether an architecture runs is only known at load time (llama.cpp support). Prefer ~1B-parameter 4-bit models; the app shows a rough memory estimate before loading. Models without an embedded chat template use a generic fallback and may answer poorly.

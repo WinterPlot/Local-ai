@@ -1,0 +1,2 @@
+-keep class app.localai.engine.NativeBridge { *; }
+-keepclassmembers class app.localai.engine.** { native <methods>; }
