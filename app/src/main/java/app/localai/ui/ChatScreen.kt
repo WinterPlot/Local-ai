@@ -186,7 +186,7 @@ fun ChatScreen(vm: ChatViewModel, onBack: () -> Unit, onModels: () -> Unit) {
             onDismissRequest = { confirmClear = false },
             title = { Text("Clear this conversation?") },
             text = { Text("All messages in this conversation will be permanently deleted.") },
-            confirmButton = { TextButton(onClick = { scope.launch { vm.clear() }; confirmClear = false }) { Text("Clear") } },
+            confirmButton = { TextButton(onClick = { scope.launch { vm.clearConversation() }; confirmClear = false }) { Text("Clear") } },
             dismissButton = { TextButton(onClick = { confirmClear = false }) { Text("Cancel") } },
         )
     }

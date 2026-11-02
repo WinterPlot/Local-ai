@@ -94,7 +94,7 @@ class ChatViewModel(private val c: AppContainer, val conversationId: String) : V
     suspend fun exportMarkdown(): String =
         ChatRepository.exportMarkdown(c.chats.title(conversationId) ?: "Conversation", c.chats.history(conversationId))
 
-    suspend fun clear() {
+    suspend fun clearConversation() {
         c.chats.history(conversationId).firstOrNull()?.let { c.chats.deleteFrom(conversationId, it.id) }
     }
 
